@@ -40,7 +40,7 @@ class Form extends React.Component {
     return (
       <section>
         <form>
-          <label htmlFor="name">
+          <label htmlFor="cardName">
             Name:
             <input
               type="text"
@@ -51,7 +51,7 @@ class Form extends React.Component {
             />
           </label>
 
-          <label htmlFor="description">
+          <label htmlFor="cardDescription">
             Descrição:
             <input
               type="textarea"
@@ -62,40 +62,40 @@ class Form extends React.Component {
             />
           </label>
 
-          <label htmlFor="attr1">
+          <label htmlFor="Attr1">
             Attr01:
             <input
               type="number"
               data-testid="attr1-input"
-              id="cardAttr1"
+              id="Attr1"
               value={ cardAttr1 }
               onChange={ onInputChange }
             />
           </label>
 
-          <label htmlFor="attr2">
+          <label htmlFor="Attr2">
             Attr02:
             <input
               type="number"
               data-testid="attr2-input"
-              id="cardAttr2"
+              id="Attr2"
               value={ cardAttr2 }
               onChange={ onInputChange }
             />
           </label>
 
-          <label htmlFor="attr3">
+          <label htmlFor="Attr3">
             Attr03:
             <input
               type="number"
               data-testid="attr3-input"
-              id="cardAttr3"
+              id="Attr3"
               value={ cardAttr3 }
               onChange={ onInputChange }
             />
           </label>
 
-          <label htmlFor="image">
+          <label htmlFor="cardImage">
             Imagem:
             <input
               type="text"
@@ -106,7 +106,7 @@ class Form extends React.Component {
             />
           </label>
 
-          <label htmlFor="rare">
+          <label htmlFor="cardRare">
             Raridade:
             <select
               data-testid="rare-input"
@@ -128,7 +128,7 @@ class Form extends React.Component {
             </select>
           </label>
 
-          <label htmlFor="super">
+          <label htmlFor="cardTrunfo">
             <input
               type="checkbox"
               data-testid="trunfo-input"
