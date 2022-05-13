@@ -2,25 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class Form extends React.Component {
-  // state = {
-  //   cardName: '',
-  //   cardDescription: '',
-  //   cardAttr1: '',
-  //   cardAttr2: '',
-  //   cardAttr3: '',
-  //   cardImage: '',
-  //   cardRare: '',
-  //   cardTrunfo: '',
-  //   hasTrunfo: '',
-  //   onInputChange: '',
-  //   onSaveButtonClick: '',
-  //   isSaveButtonDisabled: '',
-  // };
-
-  // onInputChange = (event) => {
-  //   this.setState({ [event.target.id]: event.target.value });
-  // }
-
   render() {
     const {
       cardName,
@@ -62,34 +43,34 @@ class Form extends React.Component {
             />
           </label>
 
-          <label htmlFor="Attr1">
+          <label htmlFor="cardAttr1">
             Attr01:
             <input
               type="number"
               data-testid="attr1-input"
-              id="Attr1"
+              id="cardAttr1"
               value={ cardAttr1 }
               onChange={ onInputChange }
             />
           </label>
 
-          <label htmlFor="Attr2">
+          <label htmlFor="cardAttr2">
             Attr02:
             <input
               type="number"
               data-testid="attr2-input"
-              id="Attr2"
+              id="cardAttr2"
               value={ cardAttr2 }
               onChange={ onInputChange }
             />
           </label>
 
-          <label htmlFor="Attr3">
+          <label htmlFor="cardAttr3">
             Attr03:
             <input
               type="number"
               data-testid="attr3-input"
-              id="Attr3"
+              id="cardAttr3"
               value={ cardAttr3 }
               onChange={ onInputChange }
             />
