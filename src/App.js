@@ -14,6 +14,7 @@ class App extends React.Component {
     cardTrunfo: false,
     hasTrunfo: '',
     isSaveButtonDisabled: true,
+    array: [],
   };
 
   validation = () => {
@@ -55,6 +56,54 @@ class App extends React.Component {
     this.setState({ [event.target.id]: event.target.value }, this.validation);
   }
 
+  clearForm = () => {
+    this.setState({
+      cardName: '',
+      cardDescription: '',
+      cardAttr1: 0,
+      cardAttr2: 0,
+      cardAttr3: 0,
+      cardImage: '',
+      cardRare: '',
+      cardTrunfo: false,
+      hasTrunfo: '',
+      isSaveButtonDisabled: true,
+    });
+  }
+
+  onSaveButtonClick = (event) => {
+    event.preventDefault();
+    const { cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+      cardTrunfo,
+    } = this.state;
+
+    const attr1 = parseFloat(cardAttr1);
+    const attr2 = parseFloat(cardAttr2);
+    const attr3 = parseFloat(cardAttr3);
+
+    const objectInformations = {
+      cardName,
+      cardDescription,
+      attr1,
+      attr2,
+      attr3,
+      cardImage,
+      cardRare,
+      cardTrunfo,
+    };
+
+    this.setState((previousState) => ({
+      array: [...previousState.array, objectInformations],
+    }));
+    this.clearForm();
+  }
+
   render() {
     return (
       <div>
@@ -62,6 +111,7 @@ class App extends React.Component {
         <Form
           { ...this.state }
           onInputChange={ this.onInputChange }
+          onSaveButtonClick={ this.onSaveButtonClick }
         />
         <Card
           { ...this.state }
