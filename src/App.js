@@ -12,7 +12,7 @@ class App extends React.Component {
     cardImage: '',
     cardRare: '',
     cardTrunfo: false,
-    hasTrunfo: '',
+    hasTrunfo: true,
     isSaveButtonDisabled: true,
     array: [],
   };
@@ -66,7 +66,6 @@ class App extends React.Component {
       cardImage: '',
       cardRare: '',
       cardTrunfo: false,
-      hasTrunfo: '',
       isSaveButtonDisabled: true,
     });
   }
@@ -102,9 +101,13 @@ class App extends React.Component {
       array: [...previousState.array, objectInformations],
     }));
     this.clearForm();
+    if (objectInformations.cardTrunfo === true) {
+      this.setState({ hasTrunfo: false });
+    }
   }
 
   render() {
+    const { array } = this.state;
     return (
       <div>
         <h1>Tryunfo</h1>
@@ -117,6 +120,21 @@ class App extends React.Component {
           { ...this.state }
           onInputChange={ this.onInputChange }
         />
+        <section>
+          { array.map((item) => (
+            <Card
+              key={ item.cardName }
+              cardName={ item.cardName }
+              cardDescription={ item.cardDescription }
+              cardImage={ item.cardImage }
+              cardAttr1={ item.cardAttr1 }
+              cardAttr2={ item.cardAttr2 }
+              cardAttr3={ item.cardAttr3 }
+              cardRare={ item.cardRare }
+              cardTrunfo={ item.cardTrunfo }
+            />
+          ))}
+        </section>
       </div>
     );
   }
