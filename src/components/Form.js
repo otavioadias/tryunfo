@@ -18,18 +18,18 @@ class Form extends React.Component {
       isSaveButtonDisabled,
     } = this.props;
 
-    const labelCardTrunfo = (
-      <label htmlFor="cardTrunfo">
-        <input
-          type="checkbox"
-          data-testid="trunfo-input"
-          id="cardTrunfo"
-          checked={ cardTrunfo }
-          onChange={ onInputChange }
-        />
-        Super Trybe Trunfo
-      </label>
-    );
+    // const labelCardTrunfo = (
+    //   <label htmlFor="cardTrunfo">
+    //     <input
+    //       type="checkbox"
+    //       data-testid="trunfo-input"
+    //       id="cardTrunfo"
+    //       checked={ cardTrunfo }
+    //       onChange={ onInputChange }
+    //     />
+    //     Super Trybe Trunfo
+    //   </label>
+    // );
 
     return (
       <section>
@@ -44,7 +44,6 @@ class Form extends React.Component {
               onChange={ onInputChange }
             />
           </label>
-
           <label htmlFor="cardDescription">
             Descrição:
             <input
@@ -55,7 +54,6 @@ class Form extends React.Component {
               onChange={ onInputChange }
             />
           </label>
-
           <label htmlFor="cardAttr1">
             Attr01:
             <input
@@ -66,7 +64,6 @@ class Form extends React.Component {
               onChange={ onInputChange }
             />
           </label>
-
           <label htmlFor="cardAttr2">
             Attr02:
             <input
@@ -77,7 +74,6 @@ class Form extends React.Component {
               onChange={ onInputChange }
             />
           </label>
-
           <label htmlFor="cardAttr3">
             Attr03:
             <input
@@ -88,7 +84,6 @@ class Form extends React.Component {
               onChange={ onInputChange }
             />
           </label>
-
           <label htmlFor="cardImage">
             Imagem:
             <input
@@ -99,7 +94,6 @@ class Form extends React.Component {
               onChange={ onInputChange }
             />
           </label>
-
           <label htmlFor="cardRare">
             Raridade:
             <select
@@ -121,8 +115,34 @@ class Form extends React.Component {
               </option>
             </select>
           </label>
-          {hasTrunfo === false ? <p>Você já tem um Super Trunfo em seu baralho</p>
-            : labelCardTrunfo}
+          {hasTrunfo === false && (
+            <label htmlFor="cardTrunfo">
+              <input
+                type="checkbox"
+                data-testid="trunfo-input"
+                id="cardTrunfo"
+                checked={ cardTrunfo }
+                onChange={ onInputChange }
+              />
+              Super Trybe Trunfo
+            </label>
+          )}
+          {hasTrunfo === false ? (
+            <p>Você já tem um Super Trunfo em seu baralho</p>
+          ) : (
+            <label htmlFor="cardTrunfo">
+              <input
+                type="checkbox"
+                data-testid="trunfo-input"
+                id="cardTrunfo"
+                checked={ cardTrunfo }
+                onChange={ onInputChange }
+              />
+              Super Trybe Trunfo
+            </label>
+          )}
+          )
+
           <button
             type="submit"
             data-testid="save-button"
