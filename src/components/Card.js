@@ -14,14 +14,18 @@ class Card extends React.Component {
       cardTrunfo,
     } = this.props;
 
+    const attr1 = Number(cardAttr1);
+    const attr2 = Number(cardAttr2);
+    const attr3 = Number(cardAttr3);
+
     return (
-      <section>
+      <section className="card-review">
         <h1 data-testid="name-card">{ cardName }</h1>
         <img data-testid="image-card" src={ cardImage } alt={ cardName } />
         <p data-testid="description-card">{ cardDescription }</p>
-        <h2 data-testid="attr1-card">{ cardAttr1 }</h2>
-        <h2 data-testid="attr2-card">{ cardAttr2 }</h2>
-        <h2 data-testid="attr3-card">{ cardAttr3 }</h2>
+        <h2 data-testid="attr1-card">{ attr1 >= 0 && cardAttr1 }</h2>
+        <h2 data-testid="attr2-card">{ attr2 >= 0 && cardAttr2 }</h2>
+        <h2 data-testid="attr3-card">{ attr3 >= 0 && cardAttr3 }</h2>
         <h2 data-testid="rare-card">{ cardRare }</h2>
         {cardTrunfo === true && <p data-testid="trunfo-card">Super Trunfo</p>}
       </section>

@@ -12,7 +12,7 @@ class App extends React.Component {
     cardImage: '',
     cardRare: '',
     cardTrunfo: false,
-    hasTrunfo: true,
+    hasTrunfo: false,
     isSaveButtonDisabled: true,
     array: [],
   };
@@ -102,6 +102,16 @@ class App extends React.Component {
     }));
     this.clearForm();
     if (objectInformations.cardTrunfo === true) {
+      this.setState({ hasTrunfo: true });
+    }
+  }
+
+  onDelete = (event, index) => {
+    event.preventDefault();
+    const { array, hasTrunfo } = this.state;
+    array.splice(index, 1);
+    this.setState({ array });
+    if (hasTrunfo === true) {
       this.setState({ hasTrunfo: false });
     }
   }
@@ -109,7 +119,7 @@ class App extends React.Component {
   render() {
     const { array } = this.state;
     return (
-      <div>
+      <div className="main-container">
         <h1>Tryunfo</h1>
         <Form
           { ...this.state }
@@ -121,18 +131,27 @@ class App extends React.Component {
           onInputChange={ this.onInputChange }
         />
         <section>
-          { array.map((item) => (
-            <Card
-              key={ item.cardName }
-              cardName={ item.cardName }
-              cardDescription={ item.cardDescription }
-              cardImage={ item.cardImage }
-              cardAttr1={ item.cardAttr1 }
-              cardAttr2={ item.cardAttr2 }
-              cardAttr3={ item.cardAttr3 }
-              cardRare={ item.cardRare }
-              cardTrunfo={ item.cardTrunfo }
-            />
+          { array.map((item, index) => (
+            <>
+              <Card
+                key={ index }
+                cardName={ item.cardName }
+                cardDescription={ item.cardDescription }
+                cardImage={ item.cardImage }
+                cardAttr1={ item.attr1 }
+                cardAttr2={ item.attr2 }
+                cardAttr3={ item.attr3 }
+                cardRare={ item.cardRare }
+                cardTrunfo={ item.cardTrunfo }
+              />
+              <button
+                type="button"
+                data-testid="delete-button"
+                onClick={ this.onDelete }
+              >
+                Excluir
+              </button>
+            </>
           ))}
         </section>
       </div>
