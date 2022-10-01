@@ -1,62 +1,72 @@
 .mainContainer {
-  background: radial-gradient(50% 50% at 50% 50%, #6ACAE6 0%, #4EABC7 100%);
+  background: radial-gradient(50% 50% at 50% 50%, #6acae6 0%, #4eabc7 100%);
 }
+
 .mainContainer .mainForms {
   display: flex;
+  height: 100vh;
   justify-content: space-between;
   width: 100%;
-  height: 100vh;
 }
+
 .mainContainer .formCard {
   display: flex;
   justify-content: space-evenly;
   width: 50%;
 }
+
 .mainContainer .formCard .form {
   padding: 50px;
   width: 300px;
 }
+
 .mainContainer .visualizerCard {
-  display: flex;
-  width: 50%;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 50%;
 }
+
 .mainContainer .cards {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  min-height: 100vh;
   gap: 5px;
+  min-height: 100vh;
+  width: 100%;
 }
+
 .mainContainer .cards h1 {
-  text-transform: uppercase;
   padding: 20px;
+  text-transform: uppercase;
 }
+
 .mainContainer .cards .filter {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
+
 .mainContainer .cards .allCards {
   display: flex;
   gap: 5px;
 }
+
 .mainContainer .cards .allCards .card {
-  text-align: center;
+  align-content: space-between;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-content: space-between;
   gap: 10px;
-  align-items: center;
   padding: 10px;
+  text-align: center;
 }
-.mainContainer .cards .allCards .card button {
+
+.allCards .card button {
   background-color: rgb(201, 201, 201);
-  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 21px 5px rgba(0, 0, 0, 0);
-  cursor: pointer;
-  width: 40%;
-  height: 22px;
   border: none;
   border-radius: 2px;
+  box-shadow: 5px 5px 21px 5px black;
+  cursor: pointer;
+  height: 22px;
+  width: 40%;
 }/*# sourceMappingURL=App.css.map */
