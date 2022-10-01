@@ -1,0 +1,32 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 99vh;
+  background-color: white;
+}
+
+.form-main {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 200px;
+  max-height: 300px;
+}
+.form-main input, .form-main button, .form-main select {
+  border: 1px solid rgb(104, 104, 104);
+  border-radius: 2px;
+  padding: 2px;
+}
+.form-main select {
+  margin-left: 5px;
+}
+.form-main button {
+  cursor: pointer;
+}
+.form-main .name input, .form-main .description input {
+  border: none;
+  border-bottom: 1px solid black;
+}/*# sourceMappingURL=form.css.map */

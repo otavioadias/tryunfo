@@ -1,0 +1,33 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 99vh;
+    background-color: white;
+}
+.form-main {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 200px;
+    max-height: 300px;
+    input, button, select {
+        border: 1px solid rgb(104, 104, 104);
+        border-radius: 2px;
+        padding: 2px;
+    }
+    select {
+        margin-left: 5px;
+    }
+    button {
+        cursor: pointer;
+    }
+    .name, .description {
+        input {
+            border: none;
+            border-bottom: 1px solid black;
+        }
+    }
+}

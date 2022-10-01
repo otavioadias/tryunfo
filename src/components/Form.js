@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../css/form.css';
 
 class Form extends React.Component {
   render() {
@@ -21,7 +22,7 @@ class Form extends React.Component {
     return (
       <section className="form">
         <form className="form-main">
-          <label htmlFor="cardName">
+          <label className="name" htmlFor="cardName">
             Name:
             <input
               type="text"
@@ -29,9 +30,10 @@ class Form extends React.Component {
               id="cardName"
               value={ cardName }
               onChange={ onInputChange }
+              placeholder="Nome do personagem"
             />
           </label>
-          <label htmlFor="cardDescription">
+          <label className="description" htmlFor="cardDescription">
             Descrição:
             <input
               type="textarea"
@@ -39,6 +41,7 @@ class Form extends React.Component {
               id="cardDescription"
               value={ cardDescription }
               onChange={ onInputChange }
+              placeholder="Descrição do personagem"
             />
           </label>
           <label htmlFor="cardAttr1">

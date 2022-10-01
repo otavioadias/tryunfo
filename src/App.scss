@@ -1,0 +1,62 @@
+.mainContainer {
+    background: radial-gradient(50% 50% at 50% 50%, #6ACAE6 0%, #4EABC7 100%);
+    .mainForms{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 100vh;
+    }
+    .formCard {
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+        .form {
+            padding: 50px;
+            width: 300px;
+        }
+    }
+    .visualizerCard {
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        }
+        .cards{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            min-height: 100vh;
+            gap: 5px;
+            h1 {
+                text-transform: uppercase;
+                padding: 20px;
+            }
+            .filter {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .allCards {
+                display: flex;
+                gap: 5px;
+                .card {
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-content: space-between;
+                    gap: 10px;
+                    align-items: center;
+                    padding: 10px;
+                    button {
+                        background-color: rgb(201, 201, 201);
+                        box-shadow: 0px 10px 13px -7px #000000, 5px 5px 21px 5px rgba(0,0,0,0);
+                        cursor: pointer;
+                        width: 40%;
+                        height: 22px;
+                        border: none;
+                        border-radius: 2px;
+                    }
+                }
+            }
+        }
+    }

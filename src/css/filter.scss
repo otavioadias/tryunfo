@@ -1,0 +1,9 @@
+.filter {
+    display: flex;
+    gap: 5px;
+    input, select {
+        border-radius: 2px;
+        border: none;
+        padding: 5px;
+    }
+}

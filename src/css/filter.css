@@ -1,0 +1,9 @@
+.filter {
+  display: flex;
+  gap: 5px;
+}
+.filter input, .filter select {
+  border-radius: 2px;
+  border: none;
+  padding: 5px;
+}/*# sourceMappingURL=filter.css.map */
