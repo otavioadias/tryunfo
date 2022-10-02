@@ -38,6 +38,7 @@
             }
             .allCards {
                 display: flex;
+                flex-wrap: wrap;
                 gap: 5px;
                 .card {
                     text-align: center;

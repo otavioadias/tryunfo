@@ -48,6 +48,7 @@
 
 .mainContainer .cards .allCards {
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
 }
 
@@ -65,8 +66,9 @@
   background-color: rgb(201, 201, 201);
   border: none;
   border-radius: 2px;
-  box-shadow: 5px 5px 21px 5px black;
+  box-shadow: 0 10px 13px -7px black;
   cursor: pointer;
   height: 22px;
   width: 40%;
-}/*# sourceMappingURL=App.css.map */
+}
+/*# sourceMappingURL=App.css.map */
