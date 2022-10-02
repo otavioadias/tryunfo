@@ -2,7 +2,7 @@
 
 # Sobre
 - Aplicação em React com manipulação de estados em classes;
-- Essa aplicação simulará um card dos personagens de Sword Art Online;
+- Essa aplicação simulará cards dos personagens de Sword Art Online onde é possível adicionar mais cards e remover;
 - A aplicação possui três filtros de listagem de cartas: filtro por nome, por raridade e por Super Trunfo
 
 # Como rodar a aplicação na sua máquina
